@@ -2,7 +2,7 @@
 
 ---
 
-### Exercise 1 : Identifier une séquence ADN inconnue avec BLAST
+### Exercice 1 : Identifier une séquence ADN inconnue avec BLAST
 
 1. Téléchargez le fichier “gène-mystère.fna”
 2. Ouvrez le fichier avec l'éditeur de texte de votre choix et regardez de quoi est composée la séquence
@@ -51,7 +51,7 @@ Réponse B : L'humain.
 
 ---
 
-### Exercise 2 : Télécharger une séquence depuis une base de donnée
+### Exercice 2 : Télécharger une séquence depuis une base de donnée
 1. Rendez-vous sur le site GenBank : https://www.ncbi.nlm.nih.gov/genbank/
 
 <img width="1070" alt="Screenshot 2024-10-01 at 18 08 18" src="https://github.com/user-attachments/assets/c6b135dc-bf16-41c0-b99b-2570718c4f01">
