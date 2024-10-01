@@ -14,7 +14,7 @@
 
 <details>
 <summary>Solution</summary>
-Il faut utiliser l'outil “Nucleotide BLAST” car la séquence ADN mystère contient un ensemble de nucléotides (A, C, T ou G) et non pas d'acides aminés, dans quel cas il faudrait utlisier l'outil "Protein BLAST".
+Il faut utiliser l'outil “Nucleotide BLAST” car la séquence ADN mystère contient un ensemble de nucléotides (A, C, T ou G) et non pas d'acides aminés, dans quel cas il faudrait utiliser l'outil "Protein BLAST".
 </details>
 
 4. Copiez/collez l'intégralité de la séquence OU sélectionnez l'option "upload file" pour directement la téléverser.
@@ -34,7 +34,7 @@ Il faut utiliser l'outil “Nucleotide BLAST” car la séquence ADN mystère co
 
 <details>
 <summary>Solution</summary>
-Réponse D : Le gène BRCA1, dont la mutation est liée au développement du cancer du sein.
+Réponse C : Le gène BRCA1, dont la mutation est liée au développement du cancer du sein.
 </details>
 
 #### À quel organisme appartient ce gène ?
