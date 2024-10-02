@@ -7,7 +7,7 @@
 1. Téléchargez le fichier “gène-mystère.fna”
 2. Ouvrez le fichier avec l'éditeur de texte de votre choix et examinez la séquence
 
-#### Combien de caractères alpha-numériques contient ce ficher texte ?
+#### À l'aide du terminal, déterminez combien de caractères alpha-numériques contient ce ficher texte
 
 <details> <summary>Indice</summary> 
 La fonction "wc" peut être utilisée pour compter le nombre de caractères d'un fichier texte avec l'option "-m"
