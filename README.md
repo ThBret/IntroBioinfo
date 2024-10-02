@@ -31,6 +31,7 @@ La fonction "grep" peut être utilisée pour compter le nombre de fois qu'un car
 grep -o "[ACTG]" gène-mystère.fna | sort | uniq -c
 </details>
 
+Pourquoi le nombre total de caractères et le nombre de nucléotides ne sont pas le même ?
 
 
 En génétique, le taux de GC (guanine-cytosine) correspond à la proportion de bases nucléiques d'une séquence étant soit une guanine (G), soit une cytosine (C). Le taux de GC est associé à de nombreuses caractéristiques du génome telle que sa taille et peut refléter des traits d'évolution. Utilisez une commande du terminal pour estimer le taux GC de la séquence.
@@ -58,6 +59,11 @@ Il faut utiliser l'outil “Nucleotide BLAST” car la séquence ADN mystère co
 <img width="132" alt="Screenshot 2024-10-01 at 17 39 51" src="https://github.com/user-attachments/assets/bcc515db-0d41-4f30-8250-2c44f3963666">
 
 6. Patientez une minute
+
+
+#### Quel est le pourcentage d'identité entre la séquence soumise et le résultat BLAST le plus significatif ?
+
+<details> <summary>Solution</summary> Le pourcentage d'identité est de 100%, ce qui signifie que la séquence mystère correspond à un gène présent dans la base de donnée. </details>
 
 #### Quel gène correspond à cette séquence ?
 * A. APOE1
