@@ -4,58 +4,101 @@
 
 ### Exercice 1 : Identifier une séquence ADN inconnue avec BLAST
 
-1. Téléchargez le fichier “gène-mystère.fna”
-2. Ouvrez le fichier avec l'éditeur de texte de votre choix et examinez la séquence
+1. Téléchargez le fichier “gène-mystère.fna”.
+2. Ouvrez le fichier avec l'éditeur de texte de votre choix et examinez la séquence.
 
-#### À l'aide du terminal, déterminez combien de caractères alpha-numériques contient ce ficher texte
+#### A. À l'aide du terminal, déterminez combien de caractères alpha-numériques contient ce ficher texte.
 
-<details> <summary>Indice</summary> 
-La fonction "wc" peut être utilisée pour compter le nombre de caractères d'un fichier texte avec l'option "-m"
+<details> <summary>Indice</summary>
+
+La fonction <code>wc</code> peut être utilisée pour compter le nombre de caractères d'un fichier texte avec l'option <code>-m</code>.
 </details>
 
 <details> <summary>Solution</summary>
-wc -m gène-mystère.fna
 
-Le ficher contient 172 826 caractères
+```bash
+  wc -m gène-mystère.fna
+```
 
-Pas évident mais bon à savoir, le caractère '\n' est compris alors qu'il ne devrait pas
+&rarr; <b>Le ficher contient 172 826 caractères.</b>
 
+Pas évident mais bon à savoir, le caractère "\n" est compris alors qu'il ne devrait pas (il représente le passage à la prochaine ligne). 
+
+Pour l'exclure, on peut utiliser la fonction <code>tr</code> avec l'option <code>-d</code> pour "delete".
+
+```bash
 cat gène-mystère.fna | tr -d '\n' | wc -m
+```
 
-Le ficher contient donc 170 389 caractères alpha-numériques.
+&rarr; <b>Le ficher contient donc 170 389 caractères alpha-numériques.</b>
 </details>
 
-#### Combien de nucléotides (A, C, G ou T) contient cette séquence ?
+---
+
+#### B. Combien de nucléotides (A, C, G ou T) contient cette séquence ?
 
 <details> <summary>Indice</summary> 
-La fonction "grep" peut être utilisée pour compter le nombre de fois qu'un caractère spécifique apparaît dans un fichier texte
+  
+La fonction <code>grep</code> peut être utilisée pour compter le nombre de fois qu'un caractère spécifique apparaît dans un fichier texte
+
 </details>
 
 <details> <summary>Solution</summary> 
+
+```bash
 grep -o "[ACTG]" gène-mystère.fna | sort | uniq -c
+```
+
 </details>
 
-#### Pourquoi le nombre total de caractères alpha-numériques et le nombre de nucléotides ne sont pas le même ?
+---
+
+#### C. Pourquoi le nombre total de caractères alpha-numériques et le nombre de nucléotides ne sont pas le même ?
 
 <details> <summary>Solution</summary> 
 Parce que le fichier contient deux séquences séparées qui sont chacune précédées par une ligne commençant par le symbole ">" indiquant les caractéristiques de la séquence. Ici, les caractéristiques ont été enlevées afin de ne pas révéler l'indentité du gène.
 </details>
 
-En génétique, le taux de GC (guanine-cytosine) correspond à la proportion de bases nucléiques d'une séquence étant soit une guanine (G), soit une cytosine (C). Le taux de GC est associé à de nombreuses caractéristiques du génome telle que sa taille et peut refléter des traits d'évolution. Utilisez une commande du terminal pour estimer le taux GC de la séquence.
+---
 
-<details> <summary>Indice</summary> Utiliser un éditeur de texte pour compter manuellement ou utiliser un outil en ligne qui analyse la composition en nucléotides. </details>
-<details> <summary>Solution</summary> Utiliser un éditeur de texte pour compter manuellement ou utiliser un outil en ligne qui analyse la composition en nucléotides. </details>
+#### D. En génétique, un motif est un court segment d'ADN ou d'acides aminés répétés à de nombreuses reprises le long d'une séquence. Combien de fois le motif "ATAT" apparaît-il dans la séquence mystère ?
+
+<details> <summary>Indice</summary> 
+  
+Ici on pourrait réutiliser la fonction <code>grep</code> mais un <code>control+F</code> suffira à déterminer le nombre de fois que ce motif apparaît dans la séquence.
+
+</details>
+
+<details> <summary>Solution</summary> 
+Le motif "ATAT" apparaît 910 fois dans la séquence.
+</details>
+
+---
+
+#### E. En génétique, le taux de GC (guanine-cytosine) correspond à la proportion de bases nucléiques d'une séquence étant soit une guanine (G), soit une cytosine (C). Le taux de GC est associé à de nombreuses caractéristiques du génome telle que sa taille et peut refléter des traits d'évolution. Estimez le taux de GC de la séquence.
+
+<details> <summary>Solution</summary>
+  
+(31126 + 33966) / 170389 ≈ 0.382
+
+&rarr; <b>Le taux de GC de la séquence est d'à peu près 38.2%</b>
+
+</details>
 
 
 3. Accédez au site BLAST : https://blast.ncbi.nlm.nih.gov/Blast.cgi
+
+---
   
 <img width="1299" alt="Screenshot 2024-10-01 at 17 25 11" src="https://github.com/user-attachments/assets/bf956ec6-28ed-4655-b470-0f582548baf9">
 
-#### Quel outil choisir pour identifier la séquence ?
+#### F. Quel outil choisir pour identifier la séquence ?
 
 <details>
 <summary>Solution</summary>
-Il faut utiliser l'outil “Nucleotide BLAST” car la séquence ADN mystère contient un ensemble de nucléotides (A, C, T ou G) et non pas d'acides aminés, dans quel cas il faudrait utiliser l'outil "Protein BLAST".
+  
+Il faut utiliser l'outil <b>Nucleotide BLAST</b> car la séquence ADN mystère contient un ensemble de nucléotides (A, C, T ou G) et non pas d'acides aminés, dans quel cas il faudrait utiliser l'outil <b>Protein BLAST</b>.
+
 </details>
 
 4. Copiez/collez l'intégralité de la séquence OU sélectionnez l'option "upload file" pour directement la téléverser.
@@ -67,12 +110,15 @@ Il faut utiliser l'outil “Nucleotide BLAST” car la séquence ADN mystère co
 
 6. Patientez une minute
 
+---
 
-#### Quel est le pourcentage d'identité entre la séquence soumise et le résultat BLAST le plus significatif ?
+#### G. Quel est le pourcentage d'identité entre la séquence soumise et le résultat BLAST le plus significatif ?
 
-<details> <summary>Solution</summary> Le pourcentage d'identité est de 100%, ce qui signifie que la séquence mystère correspond à un gène présent dans la base de donnée. </details>
+<details> <summary>Solution</summary> Le pourcentage d'identité entre la séquence et le premier résultat est de 100%, ce qui signifie que la séquence mystère correspond à l'identique à un gène présent dans la base de données. </details>
 
-#### Quel gène correspond à cette séquence ?
+---
+
+#### H. À quel gène correspond cette séquence ?
 * A. APOE1
 * B. HOXA1
 * C. BRCA1
@@ -80,10 +126,14 @@ Il faut utiliser l'outil “Nucleotide BLAST” car la séquence ADN mystère co
 
 <details>
 <summary>Solution</summary>
-Réponse C : Le gène BRCA1, dont la mutation est liée au développement du cancer du sein.
+
+&rarr; <bold>Réponse C : Le gène BRCA1, dont la mutation est liée au développement du cancer du sein.</bold>
+  
 </details>
 
-#### À quel organisme appartient ce gène ?
+---
+
+#### I. À quel organisme appartient ce gène ?
 
 * A. *Mus musculus* (souris)
 * B. *Homo sapiens* (humain)
@@ -92,10 +142,17 @@ Réponse C : Le gène BRCA1, dont la mutation est liée au développement du can
 
 <details>
 <summary>Solution</summary>
-Réponse B : L'humain.
+  
+&rarr; <bold>Réponse B : L'humain.</bold>
+
 </details>
 
+<br></br>
+
 ---
+
+
+
 
 ### Exercice 2 : Télécharger une séquence depuis une base de donnée
 1. Rendez-vous sur le site GenBank : https://www.ncbi.nlm.nih.gov/genbank/
