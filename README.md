@@ -5,7 +5,24 @@
 ### Exercice 1 : Identifier une séquence ADN inconnue avec BLAST
 
 1. Téléchargez le fichier “gène-mystère.fna”
-2. Ouvrez le fichier avec l'éditeur de texte de votre choix et regardez de quoi est composée la séquence
+2. Ouvrez le fichier avec l'éditeur de texte de votre choix et examinez la séquence
+
+Question supplémentaire :
+Combien de nucléotides contient cette séquence ?
+
+
+<details> <summary>Solution</summary> 
+grep -o "[ACTG]" gène-mystère.fna | sort | uniq -c
+</details>
+
+
+
+En génétique, le taux de GC (guanine-cytosine) correspond à la proportion de bases nucléiques d'une séquence étant soit une guanine (G), soit une cytosine (C). Le taux de GC est associé à de nombreuses caractéristiques du génome telle que sa taille et peut refléter des traits d'évolution. Utilisez une commande du terminal pour estimer le taux GC de la séquence.
+
+<details> <summary>Indice</summary> Utiliser un éditeur de texte pour compter manuellement ou utiliser un outil en ligne qui analyse la composition en nucléotides. </details>
+<details> <summary>Solution</summary> Utiliser un éditeur de texte pour compter manuellement ou utiliser un outil en ligne qui analyse la composition en nucléotides. </details>
+
+
 3. Accédez au site BLAST : https://blast.ncbi.nlm.nih.gov/Blast.cgi
   
 <img width="1299" alt="Screenshot 2024-10-01 at 17 25 11" src="https://github.com/user-attachments/assets/bf956ec6-28ed-4655-b470-0f582548baf9">
