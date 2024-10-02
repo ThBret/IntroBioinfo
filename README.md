@@ -7,7 +7,7 @@
 1. Téléchargez le fichier “gène-mystère.fna”
 2. Ouvrez le fichier avec l'éditeur de texte de votre choix et examinez la séquence
 
-#### Combien de caractères contient ce ficher texte ?
+#### Combien de caractères alpha-numériques contient ce ficher texte ?
 
 <details> <summary>Indice</summary> 
 La fonction "wc" peut être utilisée pour compter le nombre de caractères d'un fichier texte avec l'option "-m"
@@ -17,6 +17,12 @@ La fonction "wc" peut être utilisée pour compter le nombre de caractères d'un
 wc -m gène-mystère.fna
 
 Le ficher contient 172 826 caractères
+
+Pas évident mais bon à savoir, le caractère '\n' est compris alors qu'il ne devrait pas
+
+cat gène-mystère.fna | tr -d '\n' | wc -m
+
+Le ficher contient donc 170 389 caractères alpha-numériques.
 </details>
 
 #### Combien de nucléotides (A, C, G ou T) contient cette séquence ?
