@@ -35,7 +35,7 @@ La fonction "grep" peut être utilisée pour compter le nombre de fois qu'un car
 grep -o "[ACTG]" gène-mystère.fna | sort | uniq -c
 </details>
 
-#### Pourquoi le nombre total de caractères et le nombre de nucléotides ne sont pas le même ?
+#### Pourquoi le nombre total de caractères alpha-numériques et le nombre de nucléotides ne sont pas le même ?
 
 <details> <summary>Solution</summary> 
 Parce que le fichier contient deux séquences séparées qui sont chacune précédées par une ligne commençant par le symbole ">" indiquant les caractéristiques de la séquence. Ici, les caractéristiques ont été enlevées afin de ne pas révéler l'indentité du gène.
