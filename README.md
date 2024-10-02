@@ -8,8 +8,24 @@
 2. Ouvrez le fichier avec l'éditeur de texte de votre choix et examinez la séquence
 
 Question supplémentaire :
-Combien de nucléotides contient cette séquence ?
+Combien de caractères contient ce ficher texte ?
 
+<details> <summary>Indice</summary> 
+La fonction "wc" peut être utilisée pour compter le nombre de caractères d'un fichier texte avec l'option "-m"
+</details>
+
+<details> <summary>Solution</summary>
+~~~
+wc -m gène-mystère.fna
+~~~
+Le ficher contient 172826 caractères
+</details>
+
+Combien de nucléotides (A, C, G ou T) contient cette séquence ?
+
+<details> <summary>Indice</summary> 
+La fonction "grep" peut être utilisée pour compter le nombre de fois qu'un caractère spécifique apparaît dans un fichier texte
+</details>
 
 <details> <summary>Solution</summary> 
 grep -o "[ACTG]" gène-mystère.fna | sort | uniq -c
