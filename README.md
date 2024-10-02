@@ -7,8 +7,7 @@
 1. Téléchargez le fichier “gène-mystère.fna”
 2. Ouvrez le fichier avec l'éditeur de texte de votre choix et examinez la séquence
 
-Question supplémentaire :
-Combien de caractères contient ce ficher texte ?
+#### Combien de caractères contient ce ficher texte ?
 
 <details> <summary>Indice</summary> 
 La fonction "wc" peut être utilisée pour compter le nombre de caractères d'un fichier texte avec l'option "-m"
@@ -21,7 +20,7 @@ wc -m gène-mystère.fna
 Le ficher contient 172826 caractères
 </details>
 
-Combien de nucléotides (A, C, G ou T) contient cette séquence ?
+#### Combien de nucléotides (A, C, G ou T) contient cette séquence ?
 
 <details> <summary>Indice</summary> 
 La fonction "grep" peut être utilisée pour compter le nombre de fois qu'un caractère spécifique apparaît dans un fichier texte
@@ -31,8 +30,11 @@ La fonction "grep" peut être utilisée pour compter le nombre de fois qu'un car
 grep -o "[ACTG]" gène-mystère.fna | sort | uniq -c
 </details>
 
-Pourquoi le nombre total de caractères et le nombre de nucléotides ne sont pas le même ?
+#### Pourquoi le nombre total de caractères et le nombre de nucléotides ne sont pas le même ?
 
+<details> <summary>Solution</summary> 
+Parce que le fichier contient deux séquences séparées qui sont chacune précédées par une ligne commençant par le symbole ">" indiquant les caractéristiques de la séquence. Ici, les caractéristiques ont été enlevées afin de ne pas révéler l'indentité du gène.
+</details>
 
 En génétique, le taux de GC (guanine-cytosine) correspond à la proportion de bases nucléiques d'une séquence étant soit une guanine (G), soit une cytosine (C). Le taux de GC est associé à de nombreuses caractéristiques du génome telle que sa taille et peut refléter des traits d'évolution. Utilisez une commande du terminal pour estimer le taux GC de la séquence.
 
