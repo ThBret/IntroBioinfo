@@ -108,7 +108,7 @@ Il faut utiliser l'outil <b>Nucleotide BLAST</b> car la séquence ADN mystère c
 5. Cliquez ensuite sur le bouton bleu **BLAST** en bas de la page (inutile de toucher aux autres options pour l'instant).
 <img width="132" alt="Screenshot 2024-10-01 at 17 39 51" src="https://github.com/user-attachments/assets/bcc515db-0d41-4f30-8250-2c44f3963666">
 
-6. Patientez une minute
+6. Patientez une minute.
 
 ---
 
