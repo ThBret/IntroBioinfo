@@ -16,7 +16,7 @@ La fonction "wc" peut être utilisée pour compter le nombre de caractères d'un
 <details> <summary>Solution</summary>
 wc -m gène-mystère.fna
 
-Le ficher contient 172826 caractères
+Le ficher contient 172 826 caractères
 </details>
 
 #### Combien de nucléotides (A, C, G ou T) contient cette séquence ?
