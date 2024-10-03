@@ -2,7 +2,7 @@
 
 ---
 
-### Exercice 1 : Identifier une séquence ADN inconnue avec BLAST
+### Exercice 1 : Analyser et identifier une séquence ADN inconnue
 
 1. Téléchargez le fichier “gène-mystère.fna”.
 2. Ouvrez le fichier avec l'éditeur de texte de votre choix et examinez la séquence.
