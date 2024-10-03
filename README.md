@@ -39,14 +39,30 @@ cat gène-mystère.fna | tr -d '\n' | wc -m
 
 <details> <summary>Indice</summary> 
   
-La fonction <code>grep</code> peut être utilisée pour compter le nombre de fois qu'un caractère spécifique apparaît dans un fichier texte
+La fonction <code>grep</code> avec l'option <code>-o</code> peut être utilisée pour chercher un caractère et imprimer chaque instance de ce caractère dans le ficher. La fonction <code>uniq</code> avec l'option <code>-c</code> peut être utilisée pour compter le nombre de fois qu'un caractère apparaît.
+
+Les deux fonctions peuvent être combinées avec un pipe <code>|</code>.
 
 </details>
 
 <details> <summary>Solution</summary> 
 
+On peut compter le nombre de fois que chaque nucléotide apparaît séparément :
 ```bash
-grep -o "[ACTG]" gène-mystère.fna | sort | uniq -c
+grep -o "A" gène-mystère.fna | uniq -c
+grep -o "C" gène-mystère.fna | uniq -c
+grep -o "T" gène-mystère.fna | uniq -c
+grep -o "G" gène-mystère.fna | uniq -c
+```
+
+Équivalent avec un for loop :
+```bash
+for char in "A" "C" "T" "G"; do grep -o $char gène-mystère.fna | uniq -c ; done
+```
+
+Ou en une ligne :
+```bash
+grep -o "[ACTG]" gène-mystère.fna | sort | uniq -c | sort -r
 ```
 
 </details>
@@ -70,7 +86,7 @@ Ici on pourrait réutiliser la fonction <code>grep</code> mais un <code>control+
 </details>
 
 <details> <summary>Solution</summary> 
-Le motif "ATAT" apparaît 910 fois dans la séquence.
+Le motif "ATAT" apparaît 1007 fois dans la séquence.
 </details>
 
 ---
@@ -81,7 +97,7 @@ Le motif "ATAT" apparaît 910 fois dans la séquence.
   
 (31126 + 33966) / 170389 ≈ 0.382
 
-&rarr; <b>Le taux de GC de la séquence est d'à peu près 38.2%</b>
+&rarr; <b>Le taux de GC de la séquence est d'à peu près 38,2%</b>
 
 </details>
 
@@ -119,15 +135,15 @@ Il faut utiliser l'outil <b>Nucleotide BLAST</b> car la séquence ADN mystère c
 ---
 
 #### H. À quel gène correspond cette séquence ?
-* A. APOE1
-* B. HOXA1
-* C. BRCA1
-* D. EEF1A1
+* A. _FBXO2_
+* B. _HOXA2_
+* C. _BRCA2_
+* D. _EEF1A2_
 
 <details>
 <summary>Solution</summary>
 
-&rarr; <bold>Réponse C : Le gène BRCA1, dont la mutation est liée au développement du cancer du sein.</bold>
+&rarr; <b>Réponse C : Le gène _BRCA2_.</b>
   
 </details>
 
@@ -143,15 +159,28 @@ Il faut utiliser l'outil <b>Nucleotide BLAST</b> car la séquence ADN mystère c
 <details>
 <summary>Solution</summary>
   
-&rarr; <bold>Réponse B : L'humain.</bold>
+&rarr; <b>Réponse B : L'humain.</b>
 
 </details>
 
-<br></br>
+---
+
+#### J. Sans quitter le site, déterminez la fonction biologique du gène
+
+<details> <summary>Indice</summary> 
+Cliquer sur "l'accession" du gène (dernière colonne du tableau des résultats) vous amènera sur une page descriptive du gène où sa fonction biologique est donnée en détail.
+</details>
+
+<details>
+<summary>Solution</summary>
+
+BRCA2 est un gène suppresseur de tumeurs dont la mutation est liée à des risques plus élevés de développer un cancer du sein ou un cancer ovarien.
+  
+</details>
 
 ---
 
-
+<br></br>
 
 
 ### Exercice 2 : Télécharger une séquence depuis une base de donnée
