@@ -145,9 +145,9 @@ Il faut utiliser l'outil <b>Nucleotide BLAST</b> car la séquence ADN mystère c
 
 ---
 
-#### H. Quel est le pourcentage d'identité entre la séquence soumise et le résultat BLAST le plus significatif ?
+#### H. Qu'indiquent les résultats?
 
-<details> <summary>Solution</summary> Le pourcentage d'identité entre la séquence et le premier résultat est de 100%, ce qui signifie que la séquence mystère correspond à l'identique à un gène présent dans la base de données. </details>
+<details> <summary>Solution</summary> La séquence mystère possède un pourcentage d'identité de 100% avec au moins une séquence, ce qui signifie qu'elle correspond à l'identique à un gène présent dans la base de données. </details>
 
 ---
 
@@ -178,6 +178,15 @@ Il faut utiliser l'outil <b>Nucleotide BLAST</b> car la séquence ADN mystère c
   
 &rarr; <b>Réponse B : L'humain.</b>
 
+</details>
+
+---
+
+#### K. Pourquoi un chromosome apparaît comme premier résultat ?
+
+<details>
+<summary>Solution</summary>
+Le chromosome 13 apparaît comme premier résultat tout simplement car le gène _BRCA2_ se situe sur ce chromosome. Son code génétique est donc contenu dans la séquence du chromosome. 
 </details>
 
 ---
