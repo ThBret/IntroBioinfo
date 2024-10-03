@@ -186,12 +186,14 @@ Il faut utiliser l'outil <b>Nucleotide BLAST</b> car la séquence ADN mystère c
 
 <details>
 <summary>Solution</summary>
-Le chromosome 13 apparaît comme premier résultat tout simplement car le gène _BRCA2_ se situe sur ce chromosome. Son code génétique est donc contenu dans la séquence du chromosome. 
+  
+Le chromosome 13 apparaît comme premier résultat tout simplement car le gène _BRCA2_ est situé sur ce chromosome. Son code génétique est donc entièrement contenu dans la séquence du chromosome.
+
 </details>
 
 ---
 
-#### K. Sans quitter le site, déterminez la fonction biologique du gène
+#### L. Sans quitter le site, déterminez la fonction biologique du gène
 
 <details> <summary>Indice</summary> 
 Cliquer sur "l'accession" du gène (dernière colonne du tableau des résultats) vous amènera sur une page descriptive du gène où sa fonction biologique est donnée en détail.
