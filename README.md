@@ -188,20 +188,25 @@ BRCA2 est un gène suppresseur de tumeurs dont la mutation est liée à des risq
 
 <img width="1070" alt="Screenshot 2024-10-01 at 18 08 18" src="https://github.com/user-attachments/assets/c6b135dc-bf16-41c0-b99b-2570718c4f01">
 
-2. Assurez-vous que l'option de recherche "All Databases" ou "Gene" soit cochée
-3. Entrez **BRCA2** dans la barre de recherche puis cliquez sur le bouton "search"
-4. Cliquez sur la première option (montrée ci-dessous) puis sur le bouton "download datasets" en cochant uniquement l'option "Gene Sequences (FASTA)"
+2. Sélectionnez l'option de recherche "All Databases" ou "Gene".
+3. Entrez **_BRCA1_** dans la barre de recherche puis cliquez sur le bouton "search".
+4. Cliquez sur la première option (montrée ci-dessous) puis sur le bouton "download datasets" en cochant uniquement l'option "Gene Sequences (FASTA)".
 
-<img width="799" alt="Screenshot 2024-10-01 at 18 10 46" src="https://github.com/user-attachments/assets/7bbf7cd1-709e-4912-a3f9-8f15f01dae09">
+<img width="875" alt="Screenshot 2024-10-03 at 12 09 34" src="https://github.com/user-attachments/assets/c150bb23-f7cd-4564-ae2a-cd7c4922008d">
 
-5. Décompressez le fichier ZIP
+5. Décompressez le fichier ZIP.
 
 #### Où se trouve le fichier contenant la séquence de nucléotides ?
 
-
 <details>
 <summary>Solution</summary>
-~/ncbi_dataset/data/gene.fna (dans le dossier obtenu après avoir décompressé le fichier ZIP)
+  
+À l'adresse suivante, dans le dossier obtenu après avoir décompressé le fichier ZIP :
+
+```bash
+~/ncbi_dataset/data/gene.fna
+```
+
 </details>
 
 
