@@ -1,3 +1,0 @@
-# Introduction à la Bioinformatique - Session 2
-
-...
